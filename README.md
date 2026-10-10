@@ -1,7 +1,7 @@
 [README.md](https://github.com/user-attachments/files/33293475/README.md)
 # PDF RAG Assistant
 
-English | [中文](README.zh-CN.md)
+English 
 
 Ask questions about your PDF documents and get answers with page-level citations. This is a retrieval-augmented generation (RAG) pipeline built from scratch, with no LangChain or LlamaIndex, so every step is plain, readable Python: PDF parsing, chunking, embeddings, FAISS or Milvus vector search, BM25 hybrid retrieval, HyDE, query decomposition, and cited answer generation. It comes with a Streamlit chat app and a command line.
 
