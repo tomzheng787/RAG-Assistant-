@@ -32,21 +32,21 @@
 
 ## 在 GitHub Codespaces 上运行（无需本地安装）
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/<你的用户名>/<仓库名>)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/tomzheng787/RAG)
 
-1. 在仓库页面点 **Code → Codespaces → Create codespace on main**（或点上面的徽章）。页面会让你填 secrets：只填你要用的那家的 API key，其他留空跳过。
-2. 等几分钟安装依赖。装完后应用会自动启动，并在预览标签页里打开。想在完整的浏览器标签页里打开，就到 **Ports** 面板，点 8501 端口旁边的地球图标。
+1. 在仓库页面点 **Code → Codespaces**，再点 **⋯** 菜单 → **New with options...**（或者点上面的徽章）。在页面底部的 *Recommended secrets* 里，只填你要用的那家的 API key，其他留空，然后点 **Create codespace**。
+2. 等几分钟安装依赖。装完后应用会自动启动，并在预览标签页里打开。想在完整的浏览器标签页里打开，就到底部面板的 **PORTS** 标签，点 8501 端口旁边的地球图标（*Open in Browser*）。
 3. 在侧边栏上传 PDF，点 **Index new files**，然后就可以提问了。
 
-API key 也可以之后再加：在 GitHub 账号的 **Settings → Codespaces → Secrets** 里添加（加完要重启 codespace），或者在 codespace 里新建 `.env` 文件。GitHub 免费账号每月有 120 核时的 Codespaces 额度，默认的 2 核机器约合 60 小时。codespace 闲置 30 分钟会自动停止，也可以在 [github.com/codespaces](https://github.com/codespaces) 手动停止。上传的文件会一直保留在 codespace 里，直到你删除它。
+只有 *New with options* 页面会出现填 key 的表单。如果你直接点的是 **Create codespace on main**，可以在 GitHub 账号的 **Settings → Codespaces → Secrets** 里添加 key（授权给这个仓库，然后重启 codespace），或者在 codespace 里新建 `.env` 文件。转发的端口默认是私有的，只有你自己能打开。GitHub 免费账号每月有 120 核时的 Codespaces 额度，默认的 2 核机器约合 60 小时。codespace 闲置 30 分钟会自动停止，也可以在 [github.com/codespaces](https://github.com/codespaces) 手动停止。上传的文件会一直保留在 codespace 里，直到你删除它。
 
 ## 本地快速开始
 
 需要 Python 3.10 及以上版本。
 
 ```bash
-git clone https://github.com/<你的用户名>/<仓库名>.git
-cd <仓库名>
+git clone https://github.com/tomzheng787/RAG.git
+cd RAG
 pip install -r requirements.txt
 cp .env.example .env          # 然后去掉注释，填上你要用的 API key
 ```

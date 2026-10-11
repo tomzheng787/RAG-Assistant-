@@ -1,0 +1,24 @@
+# Secrets
+.env
+.streamlit/secrets.toml
+
+# Your documents and the indexes built from them stay local by default.
+# To publish sample PDFs, remove the documents/* lines below.
+documents/*
+!documents/.gitkeep
+index/
+*.db
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+
+# R session history
+.Rhistory

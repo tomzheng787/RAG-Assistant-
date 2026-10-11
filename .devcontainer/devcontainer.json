@@ -1,0 +1,30 @@
+// GitHub Codespaces setup: installs the requirements, starts the Streamlit app and opens a preview of it.
+{
+  "name": "PDF RAG Assistant",
+  "image": "mcr.microsoft.com/devcontainers/python:1-3.12-bookworm",
+  "postCreateCommand": "pip install -r requirements.txt",
+  // XSRF protection breaks file uploads through the Codespaces port proxy; the forwarded port is private
+  // (only you can open it), so it is turned off here only, not for other deployments
+  "postAttachCommand": {
+    "app": "streamlit run app.py --server.enableCORS false --server.enableXsrfProtection false"
+  },
+  "forwardPorts": [8501],
+  "portsAttributes": {
+    "8501": { "label": "Streamlit app", "onAutoForward": "openPreview" }
+  },
+  // Offered when creating a codespace; fill in only the providers you use. They become environment variables.
+  "secrets": {
+    "OPENAI_API_KEY": { "description": "OpenAI API key (default provider for embeddings and answers)" },
+    "DASHSCOPE_API_KEY": { "description": "Alibaba Cloud Model Studio (Qwen) API key" },
+    "ANTHROPIC_API_KEY": { "description": "Anthropic (Claude) API key" },
+    "DEEPSEEK_API_KEY": { "description": "DeepSeek API key" },
+    "ZHIPUAI_API_KEY": { "description": "Zhipu (GLM) API key" },
+    "SILICONFLOW_API_KEY": { "description": "SiliconFlow API key" },
+    "GEMINI_API_KEY": { "description": "Google Gemini API key" },
+    "VOYAGE_API_KEY": { "description": "Voyage AI API key" }
+  },
+  "customizations": {
+    "codespaces": { "openFiles": ["README.md"] },
+    "vscode": { "extensions": ["ms-python.python"] }
+  }
+}

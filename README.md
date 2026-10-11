@@ -1,4 +1,3 @@
-[README.md](https://github.com/user-attachments/files/33293539/README.md)
 # PDF RAG Assistant
 
 English | [中文](README.zh-CN.md)
@@ -33,21 +32,21 @@ Answering  question ─► [query decomposition] ─► for each (sub-)question:
 
 ## Run in GitHub Codespaces (no local setup)
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/<your-username>/<your-repo>)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/tomzheng787/RAG)
 
-1. On the repository page, click **Code → Codespaces → Create codespace on main** (or the badge above). When asked for secrets, fill in the API key of the provider you use and skip the others.
-2. Wait a few minutes while the requirements install. The app then starts by itself and opens in a preview tab; to open it in a full browser tab, go to the **Ports** panel and click the globe icon next to port 8501.
+1. On the repository page, click **Code → Codespaces**, then the **⋯** menu → **New with options...** (or open the badge link above). At the bottom of that page, enter the API key of the provider you use under *Recommended secrets* and leave the others empty, then click **Create codespace**.
+2. Wait a few minutes while the requirements install. The app then starts by itself and opens in a preview tab; to open it in a full browser tab, go to the **PORTS** tab of the bottom panel and click the globe icon (*Open in Browser*) next to port 8501.
 3. Upload PDFs in the sidebar, click **Index new files**, and ask away.
 
-API keys can also be added later under **Settings → Codespaces → Secrets** of your GitHub account (restart the codespace afterwards), or in a `.env` file inside the codespace. Free GitHub accounts get 120 core hours of Codespaces per month (60 hours on the default 2-core machine); a codespace stops after 30 idle minutes, and you can stop it yourself from [github.com/codespaces](https://github.com/codespaces). Files you upload stay in the codespace until you delete it.
+The key form only appears on the *New with options* page. If you created the codespace with the plain **Create codespace on main** button instead, add the key under **Settings → Codespaces → Secrets** of your GitHub account (give it access to this repository, then restart the codespace), or put it in a `.env` file inside the codespace. Forwarded ports are private by default, so only you can open the app. Free GitHub accounts get 120 core hours of Codespaces per month (60 hours on the default 2-core machine); a codespace stops after 30 idle minutes, and you can stop it yourself from [github.com/codespaces](https://github.com/codespaces). Files you upload stay in the codespace until you delete it.
 
 ## Quick start (local)
 
 Requires Python 3.10+.
 
 ```bash
-git clone https://github.com/<your-username>/<your-repo>.git
-cd <your-repo>
+git clone https://github.com/tomzheng787/RAG.git
+cd RAG
 pip install -r requirements.txt
 cp .env.example .env          # then uncomment and fill in the API keys you use
 ```
